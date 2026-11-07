@@ -1,0 +1,48 @@
+{
+  "simulation": {
+    "default_speed": 50,
+    "min_speed": 1,
+    "max_speed": 1000,
+    "speed_steps": [1, 5, 10, 25, 50, 100, 250, 500, 1000],
+    "default_paused": false,
+    "time_scale_factor": 86400
+  },
+  "camera": {
+    "default_fov": 45,
+    "near_clip": 0.1,
+    "far_clip": 10000,
+    "default_distance": 40,
+    "min_distance": 5,
+    "max_distance": 200,
+    "rotation_speed": 0.5,
+    "zoom_speed": 2.0,
+    "pan_speed": 0.1
+  },
+  "rendering": {
+    "star_count": 3000,
+    "orbit_segments": 128,
+    "sphere_segments": 32,
+    "enable_bloom": true,
+    "enable_shadows": false,
+    "enable_atmosphere": true,
+    "ambient_light_intensity": 0.1,
+    "sun_light_intensity": 2.0
+  },
+  "visual_scale": {
+    "note": "Visual scale is adjusted for aesthetics. Real scale would make inner planets invisible.",
+    "size_exaggeration": 25,
+    "distance_compression": 0.08
+  },
+  "keyboard_shortcuts": {
+    "pause_resume": "Space",
+    "reset_camera": "r",
+    "toggle_orbits": "o",
+    "compare_planets": "c",
+    "fullscreen": "f",
+    "close_panel": "Escape",
+    "zoom_in": "=",
+    "zoom_out": "-",
+    "speed_up": "ArrowUp",
+    "speed_down": "ArrowDown"
+  }
+}

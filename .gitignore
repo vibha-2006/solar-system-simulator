@@ -1,0 +1,24 @@
+# Claude Code
+.claude/
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+
+# Nested cloned repository
+solarsystemsimulator/
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Secrets
+.env
+.env.*
+!.env.example

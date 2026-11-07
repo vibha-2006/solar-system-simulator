@@ -1,0 +1,107 @@
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: var(--bg-primary);
+}
+
+.loading-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  filter: drop-shadow(0 0 20px rgba(0, 217, 170, 0.35));
+}
+
+.loading-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--text-primary);
+}
+
+.loading-bar {
+  width: 240px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: loading-sweep 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
+}
+
+.loading-text {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  animation: pulse-opacity 2s ease-in-out infinite;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.error-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.error-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-red);
+}
+
+.error-content p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.error-hint {
+  font-size: 11px !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-mono);
+}
+
+.retry-btn {
+  margin-top: 8px;
+  padding: 8px 20px;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--text-red);
+  font-size: 13px;
+  transition: all var(--transition-fast);
+}
+
+.retry-btn:hover {
+  background: rgba(248, 113, 113, 0.2);
+}

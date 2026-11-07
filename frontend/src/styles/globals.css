@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-void:    #030608;
+  --bg-primary: #04080e;
+  --bg-secondary: #070d16;
+  --bg-tertiary: #0a1220;
+  --bg-panel: rgba(5, 10, 20, 0.94);
+  --bg-panel-hover: rgba(8, 16, 32, 0.97);
+  --bg-card: rgba(7, 13, 26, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.07);
+
+  --border-primary: rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(0, 217, 170, 0.28);
+  --border-active: rgba(0, 217, 170, 0.55);
+
+  --text-primary: #aec4d8;
+  --text-secondary: #6a8099;
+  --text-muted: #3a5060;
+  --text-accent: #00d9aa;
+  --text-gold: #dda83a;
+  --text-green: #34d399;
+  --text-red: #f87171;
+
+  --accent: #00d9aa;
+  --accent-bright: #22ffcc;
+  --accent-dim: rgba(0, 217, 170, 0.18);
+  --accent-gold: #dda83a;
+  --accent-gold-dim: rgba(221, 168, 58, 0.18);
+  --accent-green: #22c55e;
+  --accent-cyan: #22d3ee;
+
+  --glow-accent: rgba(0, 217, 170, 0.28);
+  --glow-gold:   rgba(221, 168, 58, 0.28);
+  --glow-green:  rgba(34, 197, 94, 0.3);
+  --glow-sun:    rgba(253, 184, 19, 0.5);
+
+  --sidebar-width: 210px;
+  --navbar-height: 48px;
+  --info-panel-width: 320px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255,255,255,0.04);
+  --shadow-glow:  0 0 20px rgba(0, 217, 170, 0.15);
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-accent);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nova-app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.nova-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.nova-viewport {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
